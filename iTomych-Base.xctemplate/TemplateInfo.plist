@@ -5,52 +5,26 @@
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 	<key>Identifier</key>
-	<string>com.apple.dt.unit.preferrableProject</string>
+	<string>com.itomych.base.template</string>
 	<key>Ancestors</key>
 	<array>
 		<string>com.apple.dt.unit.cocoaTouchApplicationBase</string>
 	</array>
-	<key>Concrete</key>
-	<true/>
-	<key>Description</key>
-	<string>This template provides a starting point for an application with iOS department preferrable project structure</string>
-	<key>SortOrder</key>
-	<integer>1</integer>
-	<key>Options</key>
+	<key>Nodes</key>
 	<array>
-		<dict>
-			<key>Identifier</key>
-			<string>languageChoice</string>
-			<key>Units</key>
-			<dict>
-				<key>Objective-C</key>
-				<dict>
-					<key>Nodes</key>
-					<array>
-					</array>
-				</dict>
-				<key>Swift</key>
-				<dict>
-					<key>Nodes</key>
-					<array>
-						<string>Application/AppLifecycle.swift</string>
-						<string>AppDelegate.swift</string>
-						<string>Views/.gitkeep</string>
-						<string>Application/.gitkeep</string>
-						<string>Networking/.gitkeep</string>
-						<string>Flows/.gitkeep</string>
-						<string>Formatters/.gitkeep</string>
-						<string>Validators/.gitkeep</string>
-						<string>Controllers/.gitkeep</string>
-						<string>CodeAnalysis/.gitkeep</string>
-						<string>XcodeIntegration/.gitkeep</string>
-						<string>Extensions/UIKit/.gitkeep</string>
-						<string>Extensions/Foundation/.gitkeep</string>
-						<string>../.gitignore</string>
-					</array>
-				</dict>
-			</dict>
-		</dict>
+		<string>AppDelegate.swift</string>
+		<string>Views/.gitkeep</string>
+		<string>Application/.gitkeep</string>
+		<string>Networking/.gitkeep</string>
+		<string>Flows/.gitkeep</string>
+		<string>Formatters/.gitkeep</string>
+		<string>Validators/.gitkeep</string>
+		<string>Controllers/.gitkeep</string>
+		<string>CodeAnalysis/.gitkeep</string>
+		<string>XcodeIntegration/.gitkeep</string>
+		<string>Extensions/UIKit/.gitkeep</string>
+		<string>Extensions/Foundation/.gitkeep</string>
+		<string>../.gitignore</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
@@ -212,16 +186,6 @@
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
-
-		 <key>Application/AppLifecycle.swift</key>
-		 <dict>
-			<key>Group</key>
-        	<array>
-            	<string>Application</string>
-        	</array>
-        	<key>Path</key>
-        	<string>AppLifecycle.swift</string>
-		 </dict>
 
 		 <key>AppDelegate.swift</key>
 		 <dict>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.itomych.swift.template</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.itomych.base.template</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application with iOS department preferrable project structure</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Objective-C</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+					</array>
+				</dict>
+				<key>Swift</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+
+</dict>
+</plist>
