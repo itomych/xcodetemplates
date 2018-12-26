@@ -18,10 +18,10 @@
 		<string>../AutomationTools/.gitkeep</string>
 		<string>Networking/.gitkeep</string>
 		<string>Flows/.gitkeep</string>
+		<string>Resources/Fonts/.gitkeep</string>
 		<string>Formatters/.gitkeep</string>
 		<string>Validators/.gitkeep</string>
 		<string>Controllers/.gitkeep</string>
-		<string>CodeAnalysis/.gitkeep</string>
 		<string>XcodeIntegration/.gitkeep</string>
 		<string>Extensions/UIKit/.gitkeep</string>
 		<string>Extensions/Foundation/.gitkeep</string>
@@ -77,7 +77,7 @@
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
-
+		
 		<key>Extensions/UIKit/.gitkeep</key>
 		<dict>
 			<key>Group</key>
@@ -133,18 +133,6 @@
 			<key>Group</key>
 			<array>
 				<string>XcodeIntegration</string>
-			</array>
-			<key>Path</key>
-			<string>.gitkeep</string>
-			<key>TargetIndices</key>
-			<array/>
-		</dict>
-
-		<key>CodeAnalysis/.gitkeep</key>
-		<dict>
-			<key>Group</key>
-			<array>
-				<string>CodeAnalysis</string>
 			</array>
 			<key>Path</key>
 			<string>.gitkeep</string>
