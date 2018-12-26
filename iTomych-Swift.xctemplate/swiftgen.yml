@@ -1,0 +1,16 @@
+xcassets:
+   paths: ../Dozens/Assets.xcassets
+   templateName: swift4
+   output: ../Dozens/Resources/AssetsConstants.swift
+strings:
+   paths: ../Dozens/Resources/en.lproj/Localizable.strings
+   templateName: structured-swift3
+   output: ../Dozens/Resources/LocalizedStringConstants.swift
+fonts:
+   paths: ../Dozens/Fonts
+   templateName: swift4
+   output: ../Dozens/Resources/FontConstants.swift
+storyboards:
+   paths: ../Dozens/Flows
+   templateName: swift4
+   output: ../Dozens/Resources/StoryboardsConstants.swift
