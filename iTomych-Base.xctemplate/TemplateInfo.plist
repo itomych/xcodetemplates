@@ -17,6 +17,25 @@
 			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 			<string>10.0</string>
 		</dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Debug</key>
+			<dict>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>GCC_INSTRUMENT_PROGRAM_FLOW_ARCS</key>
+				<string>YES</string>
+				<key>GCC_GENERATE_TEST_COVERAGE_FILES</key>
+				<string>YES</string>
+				<key>OTHER_SWIFT_FLAGS</key>
+				<string>-D DEBUG</string>
+			</dict>
+			<key>Release</key>
+			<dict>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-O</string>
+			</dict>
+		</dict>
 	</dict>
 
 	<key>Nodes</key>
@@ -35,6 +54,7 @@
 		<string>Extensions/UIKit/.gitkeep</string>
 		<string>Extensions/Foundation/.gitkeep</string>
 		<string>../.gitignore</string>
+		<string>../Podfile</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
@@ -48,6 +68,19 @@
 			<array>
 				<string>AutomationTools</string>
 			</array>
+		</dict>
+
+		<key>../Podfile</key>
+		<dict>
+		  <key>TargetIndices</key>
+		  <array/>
+		  <key>Beginning</key>
+		  <string>source &apos;https://github.com/CocoaPods/Specs.git&apos;
+platform :ios, &apos;10.0&apos;
+use_frameworks!
+target &apos;___PACKAGENAME___&apos; do</string>
+		  <key>End</key>
+		  <string>end</string>
 		</dict>
 
 		<key>Views/.gitkeep</key>
