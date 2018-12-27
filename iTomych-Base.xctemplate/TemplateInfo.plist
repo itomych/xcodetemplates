@@ -77,8 +77,8 @@
 		  <key>Beginning</key>
 		  <string>source &apos;https://github.com/CocoaPods/Specs.git&apos;
 platform :ios, &apos;10.0&apos;
-use_frameworks!
-target &apos;___PACKAGENAME___&apos; do</string>
+target &apos;___PACKAGENAME___&apos; do
+	use_frameworks!</string>
 		  <key>End</key>
 		  <string>end</string>
 		</dict>

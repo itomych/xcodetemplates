@@ -17,27 +17,37 @@
 	<key>SortOrder</key>
 	<integer>1</integer>
 	<key>Options</key>
-	<array>
-		<dict>
-			<key>Identifier</key>
-			<string>languageChoice</string>
-			<key>Units</key>
+		<array>
 			<dict>
-				<key>Objective-C</key>
+				<key>Identifier</key>
+				<string>AlamofireEnabled</string>
+				<key>Name</key>
+				<string>Include Alamofire</string>
+				<key>Description</key>
+				<string>Adds Alamofire as a CocoaPod</string>
+				<key>Type</key>
+				<string>checkbox</string>
+				<key>Default</key>
+				<string>false</string>
+				<key>NotPersisted</key>
+				<true/>
+				<key>Units</key>
 				<dict>
-					<key>Nodes</key>
-					<array>
-					</array>
-				</dict>
-				<key>Swift</key>
-				<dict>
-					<key>Nodes</key>
-					<array>
-					</array>
+					<key>true</key>
+					<dict>
+						<key>Definitions</key>
+						<dict>
+							<key>../Podfile:afpod</key>
+							<string>    pod &apos;Alamofire&apos;, &apos;~&gt; 4.7&apos;</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>../Podfile:afpod</string>
+						</array>
+					</dict>
 				</dict>
 			</dict>
-		</dict>
-	</array>
+		</array>
 	<key>Targets</key>
 	<array>
 		<dict>
@@ -108,8 +118,8 @@ php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string
 		</dict>
 
 		<key>../Podfile:swiftbasics</key>
-		<string>pod &apos;SwiftLint&apos;
-pod &apos;SwiftGen&apos;, &apos;~&gt; 5.3.0&apos;</string>
+		<string>	pod &apos;SwiftLint&apos;
+	pod &apos;SwiftGen&apos;, &apos;~&gt; 5.3.0&apos;</string>
 
 		<key>../AutomationTools/cpd_script.php</key>
 		<dict>
