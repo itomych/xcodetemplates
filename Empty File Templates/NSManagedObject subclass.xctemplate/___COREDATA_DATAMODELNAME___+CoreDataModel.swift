@@ -1,0 +1,12 @@
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created on ___DATE___.
+//___COPYRIGHT___
+//___COREDATAFILECOMMENTEPILOGUE___
+
+import Foundation
+import CoreData
+
+___COREDATA_DATAMODEL_MANAGEDOBJECTCLASSES_IMPLEMENTATIONS___
