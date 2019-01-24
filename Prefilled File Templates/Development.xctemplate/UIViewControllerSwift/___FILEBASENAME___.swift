@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
 import UIKit
