@@ -74,6 +74,16 @@
 					<key>Class</key>
 					<string>ShellScript</string>
 					<key>Name</key>
+					<string>SwiftFormat</string>
+					<key>ShellPath</key>
+					<string>/bin/bash</string>
+					<key>ShellScript</key>
+					<string>&quot;${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat&quot; --config &quot;${PROJECT_DIR}/AutomationTools/swift_format_config.json&quot; &quot;${PROJECT_DIR}&quot;</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>Name</key>
 					<string>SwiftLint</string>
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
@@ -99,6 +109,7 @@ php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string
 		<string>../AutomationTools/swiftlint.yml</string>
 		<string>../AutomationTools/swiftgen.yml:basics</string>
 		<string>../AutomationTools/cpd_script.php</string>
+		<string>../AutomationTools/swift_format_config.json</string>
 		<string>../Podfile:swiftbasics</string>
 	</array>
 
@@ -117,9 +128,22 @@ php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string
 			<array/>
 		</dict>
 
+		<key>../AutomationTools/swift_format_config.json</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>AutomationTools</string>
+			</array>
+			<key>Path</key>
+			<string>swift_format_config.json</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
 		<key>../Podfile:swiftbasics</key>
 		<string>	pod &apos;SwiftLint&apos;
-	pod &apos;SwiftGen&apos;, &apos;~&gt; 5.3.0&apos;</string>
+	pod &apos;SwiftGen&apos;, &apos;~&gt; 5.3.0&apos;
+	pod &apos;SwiftFormat/CLI&apos;</string>
 
 		<key>../AutomationTools/cpd_script.php</key>
 		<dict>

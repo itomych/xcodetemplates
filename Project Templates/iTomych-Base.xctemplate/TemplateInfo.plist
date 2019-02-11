@@ -42,7 +42,6 @@
 	<array>
 		<string>AppDelegate.swift</string>
 		<string>Views/.gitkeep</string>
-		<string>Application/.gitkeep</string>
 		<string>../AutomationTools/.gitkeep</string>
 		<string>Networking/.gitkeep</string>
 		<string>Flows/.gitkeep</string>
@@ -139,18 +138,6 @@ target &apos;___PACKAGENAME___&apos; do
 			<array>
 				<string>Extensions</string>
 				<string>Foundation</string>
-			</array>
-			<key>Path</key>
-			<string>.gitkeep</string>
-			<key>TargetIndices</key>
-			<array/>
-		</dict>
-
-		<key>Application/.gitkeep</key>
-		<dict>
-			<key>Group</key>
-			<array>
-				<string>Application</string>
 			</array>
 			<key>Path</key>
 			<string>.gitkeep</string>
