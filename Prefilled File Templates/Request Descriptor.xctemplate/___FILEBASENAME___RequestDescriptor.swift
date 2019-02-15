@@ -6,7 +6,9 @@
 //  ___COPYRIGHT___
 //
 
-struct ___FILEBASENAMEASIDENTIFIER___: APIEndpoint {
+import Alamofire
+
+struct ___FILEBASENAMEASIDENTIFIER___: RequestDescriptor {
     typealias ResponseType = <#ResponseType#>
     
     var parameters: JSONObject? {
