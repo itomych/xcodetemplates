@@ -60,6 +60,15 @@
 			</dict>
 			<key>BuildPhases</key>
 			<array>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Code quality</string>
+			<key>TargetType</key>
+			<string>Aggregate</string>
+			<key>BuildPhases</key>
+			<array>
 				<dict>
 					<key>Class</key>
 					<string>ShellScript</string>
@@ -68,7 +77,7 @@
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
 					<key>ShellScript</key>
-					<string>&quot;${PODS_ROOT}/SwiftGen/bin/swiftgen&quot; config run --config &quot;${PROJECT_DIR}/AutomationTools/swiftgen.yml&quot;</string>
+					<string>&quot;${SRCROOT}/Pods/SwiftGen/bin/swiftgen&quot; config run --config &quot;${PROJECT_DIR}/AutomationTools/swiftgen.yml&quot;</string>
 				</dict>
 				<dict>
 					<key>Class</key>
@@ -78,7 +87,7 @@
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
 					<key>ShellScript</key>
-					<string>&quot;${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat&quot; --config &quot;${PROJECT_DIR}/AutomationTools/swift_format_config.json&quot; &quot;${PROJECT_DIR}&quot;</string>
+					<string>&quot;${SRCROOT}/Pods/SwiftFormat/CommandLineTool/swiftformat&quot; --swiftversion &quot;4.2&quot; --config &quot;${PROJECT_DIR}/AutomationTools/swift_format_config.json&quot; &quot;${PROJECT_DIR}&quot;</string>
 				</dict>
 				<dict>
 					<key>Class</key>
@@ -88,7 +97,7 @@
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
 					<key>ShellScript</key>
-					<string>&quot;${PODS_ROOT}/SwiftLint/swiftlint&quot; lint --config &quot;${PROJECT_DIR}/AutomationTools/swiftlint.yml&quot;</string>
+					<string>&quot;${SRCROOT}/Pods/SwiftLint/swiftlint&quot; lint --config &quot;${PROJECT_DIR}/AutomationTools/swiftlint.yml&quot;</string>
 				</dict>
 				<dict>
 					<key>Class</key>
@@ -98,11 +107,12 @@
 					<key>ShellPath</key>
 					<string>/bin/bash</string>
 					<key>ShellScript</key>
-					<string>&quot;/usr/local/bin/pmd&quot; cpd --files ${EXECUTABLE_NAME} --minimum-tokens 50 --language swift --encoding UTF-8 --format net.sourceforge.pmd.cpd.XMLRenderer > cpd-output.xml --failOnViolation true
+					<string>&quot;/usr/local/bin/pmd&quot; cpd --files ___PACKAGENAME___ --minimum-tokens 50 --language swift --encoding UTF-8 --format net.sourceforge.pmd.cpd.XMLRenderer > cpd-output.xml --failOnViolation true
 php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string>
 				</dict>
 			</array>
 		</dict>
+
 	</array>
 	<key>Nodes</key>
 	<array>
