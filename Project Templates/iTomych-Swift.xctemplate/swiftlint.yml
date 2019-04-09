@@ -1,6 +1,7 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - Carthage
+  - AutomationTools
 
 line_length:
   warning: 200
@@ -30,7 +31,7 @@ disabled_rules: # rule identifiers to exclude from running
   - force_cast
   - force_try
   - cyclomatic_complexity
-  - variable_name
+  - identifier_name
   - todo                        # disabled till API integration phase
   - unused_closure_parameter    # disabled till API integration phase
 
