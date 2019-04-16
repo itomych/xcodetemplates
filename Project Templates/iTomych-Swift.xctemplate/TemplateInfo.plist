@@ -64,7 +64,7 @@
 		</dict>
 		<dict>
 			<key>Name</key>
-			<string>Code quality</string>
+			<string>Toolchain</string>
 			<key>TargetType</key>
 			<string>Aggregate</string>
 			<key>BuildPhases</key>
