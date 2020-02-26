@@ -3,9 +3,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - AutomationTools
 
-line_length:
-  warning: 200
-  ignores_comments: true
+line_length: 300
 
 file_length:
   warning: 500
@@ -34,11 +32,11 @@ disabled_rules: # rule identifiers to exclude from running
   - identifier_name
   - todo                        # disabled till API integration phase
   - unused_closure_parameter    # disabled till API integration phase
+  - nesting
+  - private_over_fileprivate
 
 opt_in_rules:
   - empty_count
   - empty_string
   - explicit_init
   - implicit_return
-  - overridden_super_call
-  - prohibited_super_call
