@@ -1,6 +1,10 @@
 # Created by https://www.gitignore.io/api/xcode
 # Edit at https://www.gitignore.io/?templates=xcode
 
+# OSX
+#
+.DS_Store
+
 ### Xcode ###
 # Xcode
 #
@@ -8,6 +12,7 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -33,5 +38,28 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# Swift
+#
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+Pods/
+
+# Carthage
+#
+Carthage/
+
+# Copy Paste Detector
+#
+cpd-output.xml
 
 # End of https://www.gitignore.io/api/xcode
