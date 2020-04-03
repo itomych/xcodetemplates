@@ -80,10 +80,8 @@ target &apos;___PACKAGENAME___&apos; do
 	use_frameworks!</string>
 		  <key>End</key>
 		  <string>end</string>
-		  <key>Group</key>
-		  <array>
-		  	<string>Removable Resources</string>
-		  </array>
+          <key>OmitFromProjectStructure</key>
+          <true/>
 		</dict>
 
 		<key>Views/.gitkeep</key>
