@@ -41,34 +41,21 @@
 	<key>Nodes</key>
 	<array>
 		<string>AppDelegate.swift</string>
-		<string>Views/.gitkeep</string>
-		<string>../AutomationTools/.gitkeep</string>
-		<string>Networking/.gitkeep</string>
-		<string>Flows/.gitkeep</string>
-		<string>Resources/Fonts/.gitkeep</string>
-		<string>Formatters/.gitkeep</string>
-		<string>Validators/.gitkeep</string>
 		<string>Controllers/.gitkeep</string>
-		<string>XcodeIntegration/.gitkeep</string>
-		<string>Extensions/UIKit/.gitkeep</string>
 		<string>Extensions/Foundation/.gitkeep</string>
+		<string>Extensions/UIKit/.gitkeep</string>
+		<string>Flows/.gitkeep</string>
+		<string>Formatters/.gitkeep</string>
+		<string>Networking/.gitkeep</string>
+		<string>Resources/Fonts/.gitkeep</string>
+		<string>Validators/.gitkeep</string>
+		<string>Views/.gitkeep</string>
+		<string>XcodeIntegration/.gitkeep</string>
 		<string>../.gitignore</string>
 		<string>../Podfile</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
-		<key>../AutomationTools/.gitkeep</key>
-		<dict>
-			<key>Path</key>
-			<string>.gitkeep</string>
-			<key>TargetIndices</key>
-			<array/>
-			<key>Group</key>
-			<array>
-				<string>AutomationTools</string>
-			</array>
-		</dict>
-
 		<key>../Podfile</key>
 		<dict>
 		  <key>TargetIndices</key>
@@ -219,15 +206,11 @@ target &apos;___PACKAGENAME___&apos; do
 			<array/>
 		</dict>
 
-		 <key>AppDelegate.swift</key>
-		 <dict>
-			<key>Group</key>
-        	<array>
-            	<string>Application</string>
-        	</array>
-        	<key>Path</key>
-        	<string>AppDelegate.swift</string>
-		 </dict>
+		<key>AppDelegate.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>AppDelegate.swift</string>
+		</dict>
 	</dict>
 </dict>
 </plist>
