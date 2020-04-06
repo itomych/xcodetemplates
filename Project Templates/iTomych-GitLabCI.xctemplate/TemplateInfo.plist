@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.itomych.gitlabci.template</string>
+  <key>Options</key>
+  <array>
+    <dict>
+      <key>Identifier</key>
+      <string>GitLabCI</string>
+      <key>Name</key>
+      <string>Include .gitlab-ci.yml</string>
+      <key>Description</key>
+      <string>Adds .gitlab-ci.yml template</string>
+      <key>Type</key>
+      <string>checkbox</string>
+      <key>Default</key>
+      <string>false</string>
+      <key>NotPersisted</key>
+      <true/>
+      <key>Units</key>
+      <dict>
+        <key>true</key>
+        <dict>
+          <key>Nodes</key>
+          <array>
+            <string>../.gitlab-ci.yml</string>
+          </array>
+          <key>Definitions</key>
+          <dict>
+            <key>../.gitlab-ci.yml</key>
+            <dict>
+              <key>Beginning</key>
+              <string>stages:
+  - test
+  - build
+
+variables:
+  XCODE_BUILD_DIR: "build"
+  XCODE_IPA_DIR: "ipa"
+
+before_script:
+  - rm -rf "${XCODE_BUILD_DIR}"
+
+# ===================================
+# TEMPLATES
+# ===================================
+
+.test_template: &amp;test_template
+  script:
+    - pod install --deployment --repo-update
+    - xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" clean -quiet
+    - xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" -destination "${TEST_PLATFORM}" build-for-testing -quiet
+    - xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" -destination "${TEST_PLATFORM}" test-without-building -enableCodeCoverage YES -resultBundlePath "${XCODE_BUILD_DIR}/${SCHEME}.xcresult"
+  artifacts:
+    paths:
+      - "${XCODE_BUILD_DIR}/${SCHEME}.xcresult"
+  tags:
+    - xcode11
+
+.archive_template: &amp;archive_template
+  script:
+    - git remote set-url origin git@${CI_SERVER_HOST}:${CI_PROJECT_PATH}.git
+    - pod install --deployment --repo-update --silent
+    - "${BUMP_BUILD_SCRIPT_PATH}"
+    - xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" clean
+    - xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" archive -archivePath "${XCODE_BUILD_DIR}/${SCHEME}" -allowProvisioningUpdates -quiet
+    - xcodebuild -exportArchive -archivePath "${XCODE_BUILD_DIR}/${SCHEME}.xcarchive" -exportPath "${XCODE_IPA_DIR}" -exportOptionsPlist "${EXPORT_OPTIONS_PATH}"
+    - "${PUSH_BUILD_SCRIPT_PATH}"
+  variables: &amp;archive_template_vars
+    TARGET_BRANCH: "${CI_COMMIT_REF_NAME}"
+    BUMP_BUILD_SCRIPT_PATH: "bump-build-number.sh"
+    PUSH_BUILD_SCRIPT_PATH: "push-build-number.sh"
+  artifacts:
+    paths:
+    - "${XCODE_IPA_DIR}"
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[(.*?) build [0-9]+\]/
+  tags:
+    - xcode11
+
+# ===================================
+# ===================================
+
+test:
+  &lt;&lt;: *test_template
+  stage: test
+  variables:
+    TEST_PLATFORM: "platform=iOS Simulator,name=iPhone 11"
+    WORKSPACE: "___PACKAGENAME___.xcworkspace"
+    SCHEME: "___PACKAGENAME___"
+  only:
+    - merge_requests
+
+archive:
+  &lt;&lt;: *archive_template
+  stage: build
+  variables: &amp;archive_template_vars
+    TARGET_DIR: "${CI_PROJECT_DIR}"
+    WORKSPACE: "___PACKAGENAME___.xcworkspace"
+    SCHEME: "___PACKAGENAME___"
+    EXPORT_OPTIONS_PATH: "ExportOptions-___PACKAGENAME___.plist"
+  only:
+    - develop</string>
+              <key>End</key>
+              <string></string>
+              <key>Group</key>
+              <string>AutomationTools</string>
+              <key>TargetIndices</key>
+              <array/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>
