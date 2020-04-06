@@ -9,6 +9,7 @@
 	<key>Ancestors</key>
 	<array>
 		<string>com.itomych.base.template</string>
+		<string>com.itomych.gitlabci.template</string>
 	</array>
 	<key>Concrete</key>
 	<true/>
