@@ -40,6 +40,7 @@
 
 	<key>Nodes</key>
 	<array>
+		<string>AppDelegate.swift</string>
 		<string>AutomationTools/.gitkeep</string>
 		<string>Controllers/.gitkeep</string>
 		<string>Extensions/Foundation/.gitkeep</string>
@@ -216,6 +217,12 @@ target &apos;___PACKAGENAME___&apos; do
 			<string>.gitkeep</string>
 			<key>TargetIndices</key>
 			<array/>
+		</dict>
+
+		<key>AppDelegate.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>AppDelegate.swift</string>
 		</dict>
 	</dict>
 </dict>
