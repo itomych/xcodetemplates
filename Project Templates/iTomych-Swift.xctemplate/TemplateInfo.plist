@@ -117,7 +117,7 @@ php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string
 	<key>Nodes</key>
 	<array>
 		<string>../AutomationTools/swiftlint.yml</string>
-		<string>../AutomationTools/swiftgen.yml:basics</string>
+		<string>../AutomationTools/swiftgen.yml</string>
 		<string>../AutomationTools/cpd_script.php</string>
 		<string>../AutomationTools/swift_format_config.json</string>
 		<string>../Podfile:swiftbasics</string>
@@ -167,8 +167,10 @@ php &quot;./AutomationTools/cpd_script.php&quot; -cpd-xml cpd-output.xml</string
 			<array/>
 		</dict>
 
-		<key>../AutomationTools/swiftgen.yml:basics</key>
-		<string>xcassets:
+		<key>../AutomationTools/swiftgen.yml</key>
+		<dict>
+			<key>Beginning</key>
+			<string>xcassets:
    paths: ../___PACKAGENAME___/Assets.xcassets
    templateName: swift4
    output: ../___PACKAGENAME___/Resources/AssetsConstants.swift  
@@ -178,8 +180,14 @@ fonts:
    output: ../___PACKAGENAME___/Resources/FontConstants.swift
 storyboards:
    paths: ../___PACKAGENAME___/Flows
-   templateName: swift4
-   output: ../___PACKAGENAME___/Resources/StoryboardsConstants.swift</string>
+   templateName: swift4</string>
+   			<key>End</key>
+   			<string>   output: ../___PACKAGENAME___/Resources/StoryboardsConstants.swift</string>
+   			<key>Group</key>
+   			<string>AutomationTools</string>
+   			<key>TargetIndices</key>
+   			<array/>
+		</dict>
 
 	</dict>
 </dict>
