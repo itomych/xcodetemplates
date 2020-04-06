@@ -41,7 +41,6 @@
 	<key>Nodes</key>
 	<array>
 		<string>AppDelegate.swift</string>
-		<string>AutomationTools/.gitkeep</string>
 		<string>Controllers/.gitkeep</string>
 		<string>Extensions/Foundation/.gitkeep</string>
 		<string>Extensions/UIKit/.gitkeep</string>
@@ -57,18 +56,6 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
-		<key>AutomationTools/.gitkeep</key>
-		<dict>
-			<key>Path</key>
-			<string>.gitkeep</string>
-			<key>TargetIndices</key>
-			<array/>
-			<key>Group</key>
-			<array>
-				<string>AutomationTools</string>
-			</array>
-		</dict>
-
 		<key>../Podfile</key>
 		<dict>
 		  <key>TargetIndices</key>
