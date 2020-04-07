@@ -75,6 +75,13 @@
 								<string>com.itomych.networkCore.framework.template</string>
 								<key>Name</key>
 								<string>___PACKAGENAME___NetworkCore</string>
+								<key>ProductBuildPhaseInjections</key>
+								<array>
+									<dict>
+										<key>TargetIdentifier</key>
+										<string>com.apple.dt.cocoaTouchApplicationTarget</string>
+									</dict>
+								</array>
 							</dict>
 						</array>
 						<key>Nodes</key>
