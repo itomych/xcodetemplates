@@ -39,7 +39,7 @@
 						<key>Definitions</key>
 						<dict>
 							<key>../Podfile:afpod</key>
-							<string>    pod &apos;Alamofire&apos;, &apos;~&gt; 4.7&apos;</string>
+							<string>	pod &apos;Alamofire&apos;, &apos;~&gt; 4.7&apos;</string>
 						</dict>
 						<key>Nodes</key>
 						<array>
@@ -70,6 +70,18 @@
 								<string>___PACKAGENAME___NetworkCore</string>
 							</dict>
 						</array>
+						<key>Nodes</key>
+						<array>
+							<string>../Podfile:afsessionrenewerpod</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>../Podfile:afsessionrenewerpod</key>
+							<string>	target &apos;___PACKAGENAME___NetworkCore&apos; do
+		inherit! :search_paths
+		pod &apos;AlamofireSessionRenewer&apos;
+	end</string>
+						</dict>
 					</dict>
 				</dict>
 			</dict>
