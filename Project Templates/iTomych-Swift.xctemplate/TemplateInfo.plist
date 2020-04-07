@@ -48,6 +48,31 @@
 					</dict>
 				</dict>
 			</dict>
+			<dict>
+				<key>Identifier</key>
+				<string>includeNetworkCore</string>
+				<key>Name</key>
+				<string>Include NetworkCore Framework</string>
+				<key>Type</key>
+				<string>checkbox</string>
+				<key>Default</key>
+				<string>false</string>
+				<key>Units</key>
+				<dict>
+					<key>true</key>
+					<dict>
+						<key>Components</key>
+						<array>
+							<dict>
+								<key>Identifier</key>
+								<string>com.itomych.networkCore.framework.template</string>
+								<key>Name</key>
+								<string>___PACKAGENAME___NetworkCore</string>
+							</dict>
+						</array>
+					</dict>
+				</dict>
+			</dict>
 		</array>
 	<key>Targets</key>
 	<array>
