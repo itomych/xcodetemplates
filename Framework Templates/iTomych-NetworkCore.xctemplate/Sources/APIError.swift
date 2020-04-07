@@ -3,12 +3,14 @@
 import Foundation
 
 public enum APIError: Error {
+    public static var domain = "com.itomych.api.error"
+    
     case emptyResponseData
     case localizedError(code: Int, userInfo: [String: Any] = [:])
 }
 
 extension APIError: CustomNSError {
-    public static var errorDomain: String { "com.itomych.api.error" }
+    public static var errorDomain: String { APIError.domain }
     
     public var errorCode: Int {
         if case .localizedError(let code, _) = self {

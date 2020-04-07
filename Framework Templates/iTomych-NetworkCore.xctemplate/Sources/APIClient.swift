@@ -54,7 +54,7 @@ extension Downloader {
 public final class APIClient: API, Uploader, Downloader, Authorizable {
     fileprivate let baseURL: URL
     fileprivate let sessionManager: SessionManager
-    fileprivate let requestsHandler = RequestsHandler(maxRetryCount: 1)
+    fileprivate let requestsHandler = RequestsHandler(maxRetryCount: 1, errorDomain: APIError.errorDomain)
     
     public var renewCredential: ((@escaping SuccessRenewHandler, @escaping FailureRenewHandler) -> Void)? {
         get {
