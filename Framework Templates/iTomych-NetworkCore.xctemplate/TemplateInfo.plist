@@ -10,6 +10,33 @@
     <array>
         <string>com.apple.dt.unit.iosFramework</string>
     </array>
+    <key>Project</key>
+    <dict>
+        <key>SharedSettings</key>
+        <dict>
+            <key>IPHONEOS_DEPLOYMENT_TARGET</key>
+            <string>10.0</string>
+        </dict>
+        <key>Configurations</key>
+        <dict>
+            <key>Debug</key>
+            <dict>
+                <key>SWIFT_OPTIMIZATION_LEVEL</key>
+                <string>-Onone</string>
+                <key>GCC_INSTRUMENT_PROGRAM_FLOW_ARCS</key>
+                <string>YES</string>
+                <key>GCC_GENERATE_TEST_COVERAGE_FILES</key>
+                <string>YES</string>
+                <key>OTHER_SWIFT_FLAGS</key>
+                <string>-D DEBUG</string>
+            </dict>
+            <key>Release</key>
+            <dict>
+                <key>SWIFT_OPTIMIZATION_LEVEL</key>
+                <string>-O</string>
+            </dict>
+        </dict>
+    </dict>
     <key>Concrete</key>
     <true/>
     <key>Nodes</key>
