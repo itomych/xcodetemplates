@@ -117,6 +117,75 @@
 					</dict>
 				</dict>
 			</dict>
+			<dict>
+				<key>Identifier</key>
+				<string>includeNetworkCore</string>
+				<key>Name</key>
+				<string>Include NetworkCore Framework</string>
+				<key>RequiredOptions</key>
+				<dict>
+					<key>AlamofireEnabled</key>
+					<string>true</string>
+				</dict>
+				<key>Indented</key>
+				<true/>
+				<key>Type</key>
+				<string>checkbox</string>
+				<key>Default</key>
+				<string>false</string>
+				<key>Units</key>
+				<dict>
+					<key>true</key>
+					<dict>
+						<key>Components</key>
+						<array>
+							<dict>
+								<key>Identifier</key>
+								<string>com.itomych.networkCore.framework.template</string>
+								<key>Name</key>
+								<string>___PACKAGENAME___NetworkCore</string>
+								<key>ProductBuildPhaseInjections</key>
+								<array>
+									<dict>
+										<key>TargetIdentifier</key>
+										<string>com.apple.dt.cocoaTouchApplicationTarget</string>
+									</dict>
+								</array>
+							</dict>
+						</array>
+						<key>Nodes</key>
+						<array>
+							<string>../Podfile:afsessionrenewerpod</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>../Podfile:afsessionrenewerpod</key>
+							<string>	target &apos;___PACKAGENAME___NetworkCore&apos; do
+		inherit! :search_paths
+		pod &apos;AlamofireSessionRenewer&apos;
+	end</string>
+						</dict>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>Configurations</key>
+								<dict>
+									<key>Debug</key>
+									<dict>
+										<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+										<string>$(inherited)</string>
+									</dict>
+									<key>Release</key>
+									<dict>
+										<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+										<string>$(inherited)</string>
+									</dict>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+				</dict>
+			</dict>
 		</array>
 	<key>Targets</key>
 	<array>
