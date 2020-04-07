@@ -96,6 +96,24 @@
 		pod &apos;AlamofireSessionRenewer&apos;
 	end</string>
 						</dict>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>Configurations</key>
+								<dict>
+									<key>Debug</key>
+									<dict>
+										<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+										<string>$(inherited)</string>
+									</dict>
+									<key>Release</key>
+									<dict>
+										<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+										<string>$(inherited)</string>
+									</dict>
+								</dict>
+							</dict>
+						</array>
 					</dict>
 				</dict>
 			</dict>
