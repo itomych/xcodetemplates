@@ -53,6 +53,13 @@
 				<string>includeNetworkCore</string>
 				<key>Name</key>
 				<string>Include NetworkCore Framework</string>
+				<key>RequiredOptions</key>
+				<dict>
+					<key>AlamofireEnabled</key>
+					<string>true</string>
+				</dict>
+				<key>Indented</key>
+				<true/>
 				<key>Type</key>
 				<string>checkbox</string>
 				<key>Default</key>
