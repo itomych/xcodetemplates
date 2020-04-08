@@ -42,7 +42,7 @@ final class CoreDataStack: CoreDataStorage {
 extension CoreDataStack {
     func performBackgroundTaskAndSave(_ block: @escaping (NSManagedObjectContext) -> Void) {
         let context = backgroundContext
-        context.perform { [weak self] in
+        context.perform {
             block(context)
             guard context.hasChanges else { return }
             do {
