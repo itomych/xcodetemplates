@@ -186,6 +186,54 @@
 					</dict>
 				</dict>
 			</dict>
+			<dict>
+				<key>Identifier</key>
+				<string>coreData</string>
+				<key>Name</key>
+				<string>Use Core Data</string>
+				<key>Description</key>
+				<string>Whether the application should use the Core Data framework for storage</string>
+				<key>Type</key>
+				<string>checkbox</string>
+				<key>Default</key>
+				<string>false</string>
+				<key>Units</key>
+				<dict>
+					<key>true</key>
+					<array>
+						<dict>
+							<key>Nodes</key>
+							<array>
+								<string>Storage/CoreData/___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+								<string>Storage/CoreData/CoreDataStack.swift</string>
+							</array>
+							<key>Definitions</key>
+							<dict>
+								<key>Storage/CoreData/___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</key>
+								<dict>
+									<key>Path</key>
+									<string>CoreData/___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+									<key>Group</key>
+									<array>
+										<string>Storage</string>
+										<string>CoreData</string>
+									</array>
+								</dict>
+								<key>Storage/CoreData/CoreDataStack.swift</key>
+								<dict>
+									<key>Path</key>
+									<string>CoreData/CoreDataStack.swift</string>
+									<key>Group</key>
+									<array>
+										<string>Storage</string>
+										<string>CoreData</string>
+									</array>
+								</dict>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
 		</array>
 	<key>Targets</key>
 	<array>
